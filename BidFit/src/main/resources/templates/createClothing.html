@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="layouts/defaultTemplate">
+
+<head>
+	<title>Add Clothing</title>
+</head>	
+
+<div layout:fragment="content">
+	<p>Hello from Create clothing form</p>
+	<form th:action="@{doCreate}" th:object="${ClothingModel}"}>
+		<label>Name</label>
+		<input type="text" th:field="*{name}" placeholder="Clothing Name"/>
+		
+		<label>Size</label>
+		<input type="text" th:field="*{size}" placeholder="Size"/>
+		
+		<label>Material</label>
+		<input type="text" th:field="*{material}" name="material" placeholder="Material"/>
+		
+		<label>Condition</label>
+		<input type="text" th:field="*{condition}" name="Condition" placeholder="Condition"/>
+		
+		<label>Quantity</label>
+		<input type="text" th:field="*{quantity}" name="quantity" placeholder="Quantity"/>
+		
+		<label>Sex</label>
+		<input type="text" th:field="*{sex}" name="sex" placeholder="Sex"/>
+		
+		<label>Image</label>
+		<input type="text" name="Image" placeholder="Image"/>
+		
+		<label>Date</label>
+		<input type="date" th:field="*{date}" placeholder="Date"/>
+	</form>
+</div>
+</html>
+	

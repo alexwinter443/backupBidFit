@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="layouts/defaultTemplate">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Clothing</title>
+	<link rel="stylesheet" href="/css/main.css">
+
+
+</head>
+
+
+<body>
+	<div layout:fragment="content">
+		<h1>Clothing</h1>
+		
+		<div id="clothingContainer" th:each="product:${products}">
+			<div id="clothingCard" >
+				<span>Image here</span>
+				
+				<div id="content">
+					<h2 th:text="${product.name}">Nike Shoe</h2>
+					<p th:text="${product.size}">Size: 7</p>
+					<p th:text="${product.material}">Material: Leather</p>
+					<p th:text="${product.condition}">Condition: New</p th:text="${product.condition}">
+					<p th:text="${product.quantity}">Quantity: 4</p th:text="${product.quantity}">
+					<p th:text="${product.sex}">Sex: Male</p>
+					<p th:text="${product.date}">Date Created: </p>
+					<p th:text="${product.users_ID}">User Id</p>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+
+</html>

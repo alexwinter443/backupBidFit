@@ -1,0 +1,12 @@
+*{
+	padding:0;
+	margin:0;
+}
+
+#clothingContainer{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 0 10px;
+	
+}
